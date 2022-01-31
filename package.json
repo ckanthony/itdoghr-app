@@ -1,0 +1,39 @@
+{
+  "name": "packard-belle-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.25.0",
+    "classnames": "^2.2.6",
+    "js-cookie": "^3.0.1",
+    "nanoid": "^2.0.1",
+    "packard-belle": "https://github.com/jeremytsngtsng/packard-belle.git",
+    "pb-minesweeper": "1.0.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-ga4": "^1.4.1",
+    "react-rnd": "^10.0.0",
+    "react-scripts": "3.1.1",
+    "safe-eval": "^0.4.1",
+    "socket.io-client": "^4.4.1",
+    "xp.css": "^0.3.0"
+  },
+  "devDependencies": {
+    "sass": "^1.49.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

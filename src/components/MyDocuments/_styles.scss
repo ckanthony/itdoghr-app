@@ -1,0 +1,79 @@
+.MyDocuments {
+  width: 100%;
+  height: 100%;
+
+  &__div {
+    .wrapper {
+      width: 100%;
+      display: flex;
+      .introduction {
+        padding: 1rem;
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0 0 1rem;
+        background-image: url('../../data/images/documentBackground.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        img {
+          max-width: 50px;
+        }
+        h1 {
+          font-family: Arial, Helvetica;
+          font-size: 20px;
+          // mix-blend-mode: difference;
+          color: black;
+          font-weight: bolder;
+          z-index: 3;
+          margin: 2rem 1rem;
+          margin-left: 0;
+          margin-bottom: 5px;
+        }
+        .hr-bar {
+          width: 100%;
+          display: flex;
+          flex-wrap: nowrap;
+          margin-bottom: 5px;
+          div {
+            width: 25%;
+            padding: 0.1rem 1rem;
+            &:first-child {
+              background-color: red;
+            }
+            &:nth-child(2) {
+              background-color: yellow;
+            }
+            &:nth-child(3) {
+              background-color: green;
+            }
+            &:last-child {
+              background-color: skyblue;
+            }
+          }
+        }
+        .description {
+          padding: 1rem;
+        }
+      }
+
+      .content {
+        padding: 1rem;
+        flex: 1;
+        .icon-lists {
+          display: flex;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 640px) {
+    &__div .wrapper .introduction {
+      width: 30%;
+      background-size: 100%;
+    }
+  }
+
+  .StandardMenu {
+    z-index: 1;
+  }
+}
