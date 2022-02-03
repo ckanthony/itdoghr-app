@@ -1,0 +1,113 @@
+@font-face {
+  font-family: AMIBios;
+  src: url("./assets/ami_bios1.woff2") format("woff2");
+}
+
+html {
+  user-select: none;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+  background: url("./data/images/paypayduck.png");
+  background-repeat: repeat;
+  background-size: 50px;
+  touch-action: none;
+}
+
+textarea {
+  width: 100% !important;
+}
+
+#root {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.screen,
+.w98.desktop {
+  width: 100vw;
+  height: 80vh;
+}
+
+.w98 .WindowExplorer .window__menu {
+  padding: 2px 0px 2px 12px;
+  align-items: center;
+}
+
+.desktop.desktopX2 {
+  transform: scale(2);
+}
+
+.desktop.desktopX1_5 {
+  transform: scale(1.5);
+}
+
+.desktop.notMobile {
+  width: 640px;
+  height: 480px;
+}
+
+.desktop.fullScreen {
+  height: 100%;
+  position: absolute;
+  top:0;
+  bottom:0;
+  /* height: -webkit-fill-available !important; */
+  width: 100%;
+}
+
+.react-draggable > .Window {
+  height: 100%;
+  width: 100%;
+}
+
+.StandardMenuItem__button {
+  padding-top: 1px;
+}
+
+.TaskBar {
+  z-index: 75;
+}
+
+.itIsNowSafeToTurnOffYourComputer {
+  background-color: #000000 !important;
+  display: flex;
+}
+.itIsNowSafeToTurnOffYourComputer:after {
+  content: "It's now safe to turn off your computer.";
+  padding: 16px;
+  text-align: center;
+  color: orange;
+  margin: auto;
+  font-size: 22px;
+  font-family: AMIBios, "Courier New", Courier, monospace;
+}
+.desktop.windowsShuttingDown {
+  background-color: #a6c7df;
+  background-image: url("./assets/windowsShuttingDown-min.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 640px) and (min-height: 480px) {
+  .windowsShuttingDown {
+    background-size: cover;
+  }
+}
+
+@media (max-height: 500px) {
+  .hideMobileY {
+    display: none !important;
+  }
+}
+@media (max-width: 600px) {
+  .hideMobileX {
+    display: none !important;
+  }
+}

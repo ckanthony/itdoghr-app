@@ -1,0 +1,29 @@
+FROM node:lts-alpine
+
+ARG REACT_APP_GA_TRACKING_ID 
+ARG REACT_APP_GA_STREAM_NAME 
+ARG REACT_APP_URL 
+ARG REACT_APP_API_URL 
+ARG PORT
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY package.json /usr/src/app
+RUN apk add --no-cache git
+RUN yarn
+
+COPY . /usr/src/app
+
+ENV REACT_APP_GA_TRACKING_ID=${REACT_APP_GA_TRACKING_ID}
+ENV REACT_APP_GA_STREAM_NAME=${REACT_APP_GA_STREAM_NAME}
+ENV REACT_APP_URL=${REACT_APP_URL}
+ENV REACT_APP_API_URL=${REACT_APP_API_URL}
+ENV PORT=11000
+
+EXPOSE 11000
+
+RUN yarn build
+
+RUN yarn global add serve
+CMD ["serve", "-s", "build"]

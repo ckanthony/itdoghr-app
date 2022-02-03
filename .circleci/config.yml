@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run: >
+          docker build -t itdoghr-app:$CIRCLE_BRANCH
+          --build-arg REACT_APP_GA_TRACKING_ID=$REACT_APP_GA_TRACKING_ID
+          --build-arg REACT_APP_GA_STREAM_NAME=$REACT_APP_GA_STREAM_NAME
+          --build-arg REACT_APP_URL=$REACT_APP_URL
+          --build-arg REACT_APP_API_URL=$REACT_APP_API_URL
+          .
+      - run: ssh root@$SSH_ADDR docker system prune -a -f
+      - run: docker save itdoghr-app:${CIRCLE_BRANCH} | ssh -C root@$SSH_ADDR docker load
+      - run: ssh root@$SSH_ADDR "docker rm -f itdoghr-app || true"
+      - run: ssh root@$SSH_ADDR docker run --restart=always --name itdoghr-app -d -p 127.0.0.1:11000:11000 itdoghr-app:$CIRCLE_BRANCH
+workflows:
+  version: 2
+  build-and-deploy-bot:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: premier
