@@ -276,8 +276,9 @@ const actors = [{
     },
     {
       history: ["HR部阿姐",
+        "吳盈如",
         "於第1集由九龍銀行裁走裁葉念信",
-        "第11集由九龍銀行裁走Lou Chui",], id: "ivyhkactress", actor: "彭珮嵐", char: "HR阿姐-你", ig: "ivy_hkactress", img: [
+        "第11集由九龍銀行裁走Lou Chui",], id: "ivyhkactress", actor: "彭珮嵐", char: "吳盈如, HR阿姐", ig: "ivy_hkactress", img: [
           "https://upload.cc/i1/2022/01/30/eQGfzJ.png",
           "https://upload.cc/i1/2022/01/30/kobmUH.png",
       ]
