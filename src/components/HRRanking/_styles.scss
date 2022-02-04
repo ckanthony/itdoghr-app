@@ -171,6 +171,19 @@
     }
   }
 
+  @media screen and (min-width: 880px) {
+    &__div .wrapper .content-wrapper .super {
+      overflow-y: scroll;
+      height: 100%;
+      &::-webkit-scrollbar-button:vertical:decrement:end {
+        display: none;
+      }
+      &::-webkit-scrollbar-button:vertical:increment:start {
+        display: none;
+      }
+    }
+  }
+
   @media screen and (max-width: 1055px) {
     &__div .wrapper {
       overflow-y: scroll;
@@ -187,7 +200,6 @@
     &__div .wrapper .logo-wrapper {
       margin-left: 0;
     }
-
 
     &__div .wrapper .content-wrapper .rank-list-wrapper .rank-wrapper .rank {
       margin-top: 0rem;
@@ -223,7 +235,6 @@
       justify-content: start;
       padding-bottom: 2rem;
     }
-
 
     &__div .wrapper .logo-wrapper,
     &__div .wrapper .content-wrapper {
@@ -296,8 +307,14 @@
     &__div .wrapper .content-wrapper .rank-list-wrapper .rank-wrapper .rank {
       margin-top: 1rem;
     }
-    
-    &__div .wrapper .content-wrapper .rank-list-wrapper .rank-wrapper .rank .counter {
+
+    &__div
+      .wrapper
+      .content-wrapper
+      .rank-list-wrapper
+      .rank-wrapper
+      .rank
+      .counter {
       font-size: 2.5rem;
     }
 

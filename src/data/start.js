@@ -19,6 +19,13 @@ const programs = [
     title: '員工能力綜合排名',
     icon: icons.ranking,
     component: "HRRanking",
+    super: false,
+  },
+  {
+    title: "大台員工能力綜合排名",
+    icon: icons.super,
+    component: "HRRanking",
+    super: true,
   },
 ];
 

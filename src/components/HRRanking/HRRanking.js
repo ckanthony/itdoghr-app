@@ -43,43 +43,83 @@ class HRRanking extends Component {
               <div className="wrapper">
                 <div className="logo-wrapper">
                   <div>
-                    <img src={"https://upload.cc/i1/2022/01/29/QSWyRT.png"} />
+                    <img src={props.super ? "https://upload.cc/i1/2022/02/04/kFQ0hm.jpeg" : "https://upload.cc/i1/2022/01/29/QSWyRT.png"} />
                   </div>
-                  <div className="title">
-                    <p>員工能力</p>
-                    <p>綜合評分系統</p>
-                  </div>
-                  <div className="subtitle">
-                    <span>出席率</span>
-                    <span>'</span>
-                    <span>溝通能力</span>
-                    <span>'</span>
-                    <span>team work指數</span>
-                    <span>'</span>
-                    <span>社交能力</span>
-                    <span>'</span>
-                    <span>年資</span>
-                  </div>
+                  {
+                    props.super ?
+                      <div className="title">
+                        <p>大台員工能力</p>
+                        <p>綜合評分系統</p>
+                      </div> :
+                      <div className="title">
+                        <p>員工能力</p>
+                        <p>綜合評分系統</p>
+                      </div>
+                  }
+
+                  {
+                    props.super ?
+                      <div className="subtitle">
+                        <span>
+                          大家今日咁高興
+                        </span>
+                        <span></span>
+                        <span>不如我地打和啦</span>
+                      </div> :
+                      <div className="subtitle">
+                        <span>出席率</span>
+                        <span>'</span>
+                        <span>溝通能力</span>
+                        <span>'</span>
+                        <span>team work指數</span>
+                        <span>'</span>
+                        <span>社交能力</span>
+                        <span>'</span>
+                        <span>年資</span>
+                      </div>
+                  }
+
                 </div>
                 <div className="content-wrapper">
-                  <div className="rank-list-wrapper">
-                    {
-                      Object.entries(this.context.api.cachedvotes).sort((a, b) => { return b[1] - a[1]; }).slice(0, 5).map(([k, v], i) => {
-                        return (
-                          <div className="rank-wrapper">
-                            <div className="rank">
-                              <div className="counter">{formatNumber(v)}</div>
-                              <div className="avatar">
-                                {(this.state.actors[k] && this.state.actors[k]['img']) ? <img src={this.state.actors[k]['img'][0]} /> : <img src={"https://upload.cc/i1/2022/01/31/QJ4p6V.png"} />}
-                              </div>
-                              <div className="name-box-wrapper"><div className="name-box">{this.state.actors[k] ? this.state.actors[k]['char'] : "員工"}</div></div>
+                  {
+                    !props.super ? <div className="rank-list-wrapper">
+                      {
+                        Object.entries(this.context.api.cachedvotes).sort((a, b) => { return b[1] - a[1]; }).slice(0, 5).map(([k, v], i) => {
+                          return (
+                            <div className="rank-wrapper">
+                              <div className="rank">
+                                <div className="counter">{formatNumber(v)}</div>
+                                <div className="avatar">
+                                  {(this.state.actors[k] && this.state.actors[k]['img']) ? <img src={this.state.actors[k]['img'][0]} /> : <img src={"https://upload.cc/i1/2022/01/31/QJ4p6V.png"} />}
+                                </div>
+                                <div className="name-box-wrapper"><div className="name-box">{this.state.actors[k] ? this.state.actors[k]['char'] : "員工"}</div></div>
 
+                              </div>
                             </div>
-                          </div>
-                        );
-                      })
-                    }
-                  </div>
+                          );
+                        })
+                      }
+                    </div> :
+                      <div className="rank-list-wrapper super">
+                        {
+                          Object.entries(this.context.api.cachedvotes).map(([k, v], i) => {
+                            return (
+                              <div className="rank-wrapper">
+                                <div className="rank">
+                                  <div className="counter">{'打和！'}</div>
+                                  <div className="avatar">
+                                    {(this.state.actors[k] && this.state.actors[k]['img']) ? <img src={this.state.actors[k]['img'][0]} /> : <img src={"https://upload.cc/i1/2022/01/31/QJ4p6V.png"} />}
+                                  </div>
+                                  <div className="name-box-wrapper"><div className="name-box">{this.state.actors[k] ? this.state.actors[k]['char'] : "員工"}</div></div>
+
+                                </div>
+                              </div>
+                            );
+                          })
+                        }
+                      </div>
+                  }
+
                 </div>
               </div>
 
