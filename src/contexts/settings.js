@@ -22,7 +22,7 @@ class SettingsProvider extends Component {
       (window && !window.localStorage.getItem("loggedIn") && bgImg),
     bgColor: "#6363A0",
     backgroundRepeat: 'repeat',
-    countDown: 60000,
+    countDown: 28800000,
     isActive: true,
     mousePositionX: null,
     mousePositionY: null,
