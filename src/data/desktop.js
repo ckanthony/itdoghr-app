@@ -37,6 +37,13 @@ export default [
     title: "排行榜",
     icon: icons.ranking,
     component: "HRRanking",
+    super: false,
+  },
+  {
+    title: "大台理論",
+    icon: icons.super,
+    component: "HRRanking",
+    super: true,
   },
   {
     title: "README",

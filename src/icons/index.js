@@ -84,3 +84,4 @@ export { default as paypayduck } from './paypayduck.png';
 export { default as touchwood } from './touchwood.png';
 export { default as cuomputerCustom } from './computerCustom.png';
 export { default as mailCustom } from './mailCustom.png';
+export { default as super } from './super.png';
