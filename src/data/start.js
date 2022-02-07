@@ -34,7 +34,7 @@ const programs = [
   },
   {
     title: "Data狗",
-    icon: icons.mailCustom,
+    icon: icons.datadog,
     component: "Tableau",
   },
 ];
