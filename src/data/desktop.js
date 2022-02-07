@@ -51,6 +51,11 @@ export default [
     component: "HRWorkstationS2",
   },
   {
+    title: "Data狗",
+    icon: icons.mailCustom,
+    component: "Tableau",
+  },
+  {
     title: "README",
     icon: icons.mailCustom,
     component: "Readme",

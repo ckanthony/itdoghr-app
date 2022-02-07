@@ -7,3 +7,4 @@ export { default as HRRanking } from "./HRRanking";
 export { default as MyDocuments } from "./MyDocuments";
 export { default as MyComputer } from "./MyComputer";
 export { default as Readme } from "./Readme";
+export { default as Tableau } from "./Tableau";

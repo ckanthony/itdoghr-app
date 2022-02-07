@@ -32,6 +32,11 @@ const programs = [
     icon: icons.itdog,
     component: "HRWorkstationS2",
   },
+  {
+    title: "Tableau",
+    icon: icons.mailCustom,
+    component: "Tableau",
+  },
 ];
 
 export default [
