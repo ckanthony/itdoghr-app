@@ -150,7 +150,7 @@ class HRWorkstationS2 extends Component {
                         <>
                           <div className="detailWrapper" >
                             <div className="content">
-                              <div style={{ display: 'block' }}>
+                              <div style={{ display: 'block', height: '100%' }}>
                                 <div className="detail">
                                   <div className="candidate">
                                     <div>{r.actor}</div>

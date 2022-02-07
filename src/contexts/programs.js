@@ -642,7 +642,7 @@ class ProgramProvider extends Component {
       }));
       // Cookies.get('visited') ? this.open(_d[3]) : this.open(_d[4]);
       // if (!Cookies.get('visited')) Cookies.set('visited', Date.now())
-      this.open(_d[5]);
+      this.open(_d[6]);
 
     }
     //   _d.map(x => {

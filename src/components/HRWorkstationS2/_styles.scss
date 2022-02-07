@@ -32,6 +32,7 @@
     .wrapper {
       flex-grow: 1;
       .content {
+        height: 100%;
         padding: 1rem;
         @media (max-width: 500px) {
           padding-left: 0.5rem;
@@ -43,6 +44,7 @@
           max-height: 100%;
         }
         .detailWrapper {
+          height: 100%;
             position: relative;
             width: 100%;
             .inner-tab-panel {
@@ -68,6 +70,7 @@
               }
             }
             .detail {
+              height: 100%;
               overflow-y: auto;
               overflow-x: hidden;
               display: flex;
