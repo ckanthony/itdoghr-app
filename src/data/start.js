@@ -28,8 +28,8 @@ const programs = [
     super: true,
   },
   {
-    title: "第二季",
-    icon: icons.super,
+    title: "第二季!",
+    icon: icons.itdog,
     component: "HRWorkstationS2",
   },
 ];

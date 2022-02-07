@@ -66,17 +66,17 @@ class HRWorkstationS2 extends Component {
     });
   }
 
-  // onImageClick(id) {
-  //   event('Voting Page', `${id} Image`, 'Image');
-  //   const imgList = this.state.actors[id].img;
-  //   let cIndex = this.state.currentImageIndex;
-  //   let nIndex;
-  //   nIndex = (cIndex === imgList.length - 1) ? 0 : cIndex + 1;
-  //   this.setState({
-  //     currentImageIndex: nIndex,
-  //   });
+  onImageClick(id) {
+    event('Voting Page', `${id} Image`, 'Image');
+    const imgList = this.state.actors[id].img;
+    let cIndex = this.state.currentImageIndex;
+    let nIndex;
+    nIndex = (cIndex === imgList.length - 1) ? 0 : cIndex + 1;
+    this.setState({
+      currentImageIndex: nIndex,
+    });
 
-  // }
+  }
 
   async componentDidMount() {
     setTimeout(this.getIframeDimension, 3000);
@@ -160,7 +160,7 @@ class HRWorkstationS2 extends Component {
                                     : <img className="avatar" src={"https://upload.cc/i1/2022/01/31/QJ4p6V.png"} />}
                                   <div className={`counter {this.state.switch ? "" : "switch"}`} >
                                     <div>
-                                      <div style={{ padding: (!this.state.inputCandidates[this.state.selectedCandidate.id]) ? '15px 20px 10px 20px' : 0 }}>{context.api.displayvotes[this.state.selectedCandidate.id]}</div>
+                                      <div style={{ padding: (!this.state.inputCandidates[this.state.selectedCandidate.id]) ? '15px 20px 10px 20px' : 0 }}>{context.api.displayvotes[this.state.selectedCandidate.id] ? formatNumber(context.api.displayvotes[this.state.selectedCandidate.id]) : ''}</div>
                                       {(this.state.inputCandidates[this.state.selectedCandidate.id]) ? <div className="plusCounter" >(+{this.state.inputCandidates[this.state.selectedCandidate.id]})</div> : <></>}
                                     </div>
                                   </div>

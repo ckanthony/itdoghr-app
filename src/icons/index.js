@@ -85,3 +85,4 @@ export { default as touchwood } from './touchwood.png';
 export { default as cuomputerCustom } from './computerCustom.png';
 export { default as mailCustom } from './mailCustom.png';
 export { default as super } from './super.png';
+export { default as itdog } from './itdog.png';

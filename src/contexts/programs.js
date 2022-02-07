@@ -64,10 +64,10 @@ const otherProjects = [
 
 const s2 = [{
   id: 's2',
-  actor: '第二季',
-  char: 's2',
+  actor: '第二季!',
+  char: '第二季!',
   ig: 's2',
-  img: [""]
+  img: ["https://upload.cc/i1/2022/02/07/i9rk2f.jpeg"]
 }]
 
 const actors = [{
