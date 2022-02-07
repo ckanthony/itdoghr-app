@@ -27,6 +27,11 @@ const programs = [
     component: "HRRanking",
     super: true,
   },
+  {
+    title: "第二季",
+    icon: icons.super,
+    component: "HRWorkstationS2",
+  },
 ];
 
 export default [

@@ -46,6 +46,11 @@ export default [
     super: true,
   },
   {
+    title: "第二季",
+    icon: icons.super,
+    component: "HRWorkstationS2",
+  },
+  {
     title: "README",
     icon: icons.mailCustom,
     component: "Readme",

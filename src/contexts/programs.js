@@ -62,6 +62,14 @@ const otherProjects = [
 //   { id: "estherccwu", name: "", pos: "配樂", ig: "estherccwu", },]
 // },];
 
+const s2 = [{
+  id: 's2',
+  actor: '第二季',
+  char: 's2',
+  ig: 's2',
+  img: [""]
+}]
+
 const actors = [{
   props: "PayPayDuck & Born Hub", data: [{
     history: ["阿信",
@@ -608,6 +616,7 @@ class ProgramProvider extends Component {
     offlineCachedVotes: {},
     api: {
       actors: actors,
+      s2: s2,
       localvotes: {},
       cachedvotes: {},
       displayvotes: {},
