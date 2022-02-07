@@ -28,7 +28,7 @@ class Tableau extends Component {
             resizable={false}
             menuOptions={buildMenu(props)}
           >
-            {/* <iframe src="" className="wrapper" /> */}
+            <iframe src="https://itdoghr.com/stats" className="wrapper" />
 
           </Window>
         )}
