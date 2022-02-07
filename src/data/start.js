@@ -33,7 +33,7 @@ const programs = [
     component: "HRWorkstationS2",
   },
   {
-    title: "Tableau",
+    title: "Data狗",
     icon: icons.mailCustom,
     component: "Tableau",
   },
