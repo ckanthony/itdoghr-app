@@ -157,7 +157,7 @@ class HRWorkstationS2 extends Component {
                                   </div>
                                   {(r.img && r.img.length > 0) ?
                                     <img src={r.img} width={'100%'} className="avatar" />
-                                    : <img className="avatar" src={"https://upload.cc/i1/2022/01/31/QJ4p6V.png"} />}
+                                    : <a href="https://www.instagram.com/p/CZm30_qv_lQ/" target="_blank"><img className="avatar" src={"https://upload.cc/i1/2022/01/31/QJ4p6V.png"} /></a>}
                                   <div className={`counter {this.state.switch ? "" : "switch"}`} >
                                     <div>
                                       <div style={{ padding: (!this.state.inputCandidates[this.state.selectedCandidate.id]) ? '15px 20px 10px 20px' : 0 }}>{context.api.displayvotes[this.state.selectedCandidate.id] ? formatNumber(context.api.displayvotes[this.state.selectedCandidate.id]) : ''}</div>
