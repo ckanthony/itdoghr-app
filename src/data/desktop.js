@@ -51,7 +51,7 @@ export default [
     component: "HRWorkstationS2",
   },
   {
-    title: "Data狗",
+    title: "Data 狗呈獻：員工排名洞察報告",
     icon: icons.datadog,
     component: "Tableau",
   },
