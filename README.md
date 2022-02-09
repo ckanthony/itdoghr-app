@@ -102,7 +102,25 @@ local installation
 		</td>
 		</tr>
 </table>
-
+<h2>數據收集及數據視覺化分析</h2>
+				<table style="margin: auto">
+					<tr>
+						<td style="width: 150px">
+						<img src="https://upload.cc/i1/2022/02/09/XB1w5C.jpg" width="150px" />
+						</td>
+						<td>
+						<div>Rachel Lui</div>
+						<div>linkedin: <a
+								href="https://www.linkedin.com/in/rachel-lui-bb991784/"
+								target="_blank">Linkedin</a>
+						</div>
+						<div>ig: <a
+								href="https://www.instagram.com/luiyukkiu_rachel/"
+								target="_blank">@luiyukkiu_rachel</a>
+						</div>
+						</td>
+						</tr>
+				</table>
 <h2>特別致謝</h2>
 <h3>本作品有幸得到Wilson Lai 授權使用他的《IT 狗》演員頭像作品，特此致謝。</h3>
 <table style="margin: auto">
